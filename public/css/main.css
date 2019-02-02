@@ -1,0 +1,69 @@
+.container1 {
+  display: grid;
+  grid-template-columns: [first] 5fr [menu-left] 2fr [menu-right last];
+  grid-template-rows: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven];
+}
+
+.container2 {
+  display: inline-grid;
+  grid-template-columns: [left-marg] 80px [left-in] 1fr [mid] 1fr [right-in] 80px [right-marg];
+  grid-template-rows: [top-marg] 1fr [top-in] 5fr [mid] 5fr [btm-in] 1fr [btm-marg];
+  justify-self: left;
+}
+
+.quotes {
+  grid-column: first / menu-left;
+  grid-row: one / two;
+}
+.menu {
+  grid-column: menu-left / menu-right;
+  place-self: center center;
+}
+
+.content {
+  grid-column: first / menu-left;
+  grid-row: two / seven;
+  place-self: center stretch;
+}
+p#bio {
+  grid-column: first / menu-left;
+  grid-row: two / seven;
+  place-self: center center;
+  font-size: 70%;
+}
+.slideshow {
+  grid-row: one / two;
+}
+.repos {
+  grid-row: two / three;
+}
+
+.weather {
+  grid-row: three / four;
+}
+.bio {
+  grid-row: four / five;
+}
+
+.employment {
+  grid-row: five / six;
+}
+
+.footer {
+  grid-row: six / seven;
+}
+
+.tech {
+  grid-column: left-in / mid;
+  grid-row: top-in / btm-in;
+}
+
+.myself {
+  grid-column: mid / right-in;
+  grid-row: top-in / mid;
+}
+
+.image {
+  grid-column: mid / right-in;
+  grid-row: mid / btm-in;
+}

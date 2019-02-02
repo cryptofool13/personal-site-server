@@ -1,0 +1,14 @@
+doctype html
+html
+head
+  link(rel="stylesheet", href="/css/main.css")
+  title Mike's Site
+body
+  .container1
+    .quotes
+      p.
+        "This is a placeholder quote. I will be replaced by a list of stored
+        quotes, displaying a new one upon each visit." - Michael Curry
+    include ./partials/menu.pug
+    .content.container2
+      block content
