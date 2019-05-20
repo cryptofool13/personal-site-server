@@ -1,5 +1,5 @@
 const express = require("express");
-
+const path = require("path");
 const app = express();
 
 // const landing = require("./public/html/landing.html");
@@ -16,9 +16,7 @@ app.get("/bio", (req, res) => {
   res.render("./partials/bio");
 });
 app.get("/", (req, res) => {
-  res.sendFile(
-    "/home/mike/desktop/jsProjects/personal/server/public/html/landing.html"
-  );
+  res.sendFile(path.resolve(__dirname, "public/html/landing.html"));
 });
 app.listen(3000, () => {
   console.log("App listening on port 3000!");
